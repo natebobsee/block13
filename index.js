@@ -26,16 +26,16 @@ function convertToCelsius(fahren) {
  */
  function createMessage(fahren, celc) {
  if (fahren < 32){
-  return "it is very cold"
+  return "it is very cold"+fahren;
   }
   else if (64>fahren){
-  return "it is cold" 
+  return "it is cold"+fahren; 
   }
   else if (86>fahren){
-  return "it is warm" 
+  return "it is warm"+fahren; 
   }
   else{
-  return "it is hot"
+  return "it is hot"+fahren;
   }
  }
 
@@ -45,7 +45,7 @@ function convertToCelsius(fahren) {
  * @returns {number} a number between 0 and the int passed in
  */
 function rand(limit) { 
-  return limit*Math.random();
+  return Math.round(limit*Math.random());
 }
 
 // -------------------- DO NOT CHANGE THE CODE BELOW ---------------------- //
