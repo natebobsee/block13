@@ -6,7 +6,7 @@
  * @returns {number} the number of degrees C
  */
 function convertToCelsius(fahren) {
-  return 5*(fahren-32)/9;
+  return Math.round(5*(fahren-32)/9);
 }
 
 /**
@@ -26,16 +26,16 @@ function convertToCelsius(fahren) {
  */
  function createMessage(fahren, celc) {
  if (fahren < 32){
-  return "it is very cold"+fahren;
+  return "it is very cold"+fahren+"F" +celc+"C";
   }
   else if (64>fahren){
-  return "it is cold"+fahren; 
+  return "it is cold"+fahren+"F"+celc+"C"; 
   }
   else if (86>fahren){
-  return "it is warm"+fahren; 
+    return "it is warm"+fahren+"F"+celc+"C";
   }
   else{
-  return "it is hot"+fahren;
+  return "it is hot"+fahren+"F"+celc+"C";
   }
  }
 
